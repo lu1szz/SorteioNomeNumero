@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorteador de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #numero-sorteado {
+            font-size: 48px;
+            margin: 20px;
+        }
+        #sortear {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorteador de Números</h1>
+    <div id="numero-sorteado">0</div>
+    <button id="sortear">Sortear</button>
+
+    <script>
+        // Função para gerar um número aleatório entre 1 e 100
+        function sortearNumero() {
+            const numeroSorteado = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('numero-sorteado').textContent = numeroSorteado;
+        }
+
+        // Adiciona um evento de clique ao botão de sorteio
+        document.getElementById('sortear').addEventListener('click', sortearNumero);
+    </script>
+</body>
+</html>
